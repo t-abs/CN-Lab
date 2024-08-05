@@ -1,0 +1,360 @@
+Assignment 1-
+
+C:\Users\KIIT>ipconfig
+
+Windows IP Configuration
+
+
+Ethernet adapter Ethernet:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::fbff:d86e:946e:aa00%13
+   IPv4 Address. . . . . . . . . . . : 192.168.56.1
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . :
+
+Wireless LAN adapter Local Area Connection* 3:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Local Area Connection* 4:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Wi-Fi:
+
+   Connection-specific DNS Suffix  . :
+   IPv4 Address. . . . . . . . . . . : 192.168.122.112
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 192.168.122.125
+
+Ethernet adapter Bluetooth Network Connection:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Ethernet adapter vEthernet (WSL):
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::5cfb:88ca:42fe:d388%48
+   IPv4 Address. . . . . . . . . . . : 172.26.192.1
+   Subnet Mask . . . . . . . . . . . : 255.255.240.0
+   Default Gateway . . . . . . . . . :
+
+C:\Users\KIIT>tracert www.kiit.ac.in
+
+Tracing route to www.kiit.ac.in [104.26.2.120]
+over a maximum of 30 hops:
+
+  1     4 ms     2 ms     4 ms  192.168.122.125
+  2     *        *        *     Request timed out.
+  3     *        *        *     Request timed out.
+  4     *        *        *     Request timed out.
+  5   100 ms    55 ms    50 ms  192.168.227.195
+  6    65 ms    57 ms    58 ms  192.168.245.130
+  7     *        *        *     Request timed out.
+  8     *        *        *     Request timed out.
+  9     *        *        *     Request timed out.
+ 10     *        *        *     Request timed out.
+ 11   114 ms   137 ms   125 ms  49.44.220.133
+ 12   102 ms    89 ms    77 ms  104.26.2.120
+
+Trace complete.
+
+C:\Users\KIIT>netstat -s
+
+IPv4 Statistics
+
+  Packets Received                   = 13455182
+  Received Header Errors             = 9
+  Received Address Errors            = 175
+  Datagrams Forwarded                = 0
+  Unknown Protocols Received         = 0
+  Received Packets Discarded         = 4000
+  Received Packets Delivered         = 11482256
+  Output Requests                    = 5497694
+  Routing Discards                   = 0
+  Discarded Output Packets           = 19100
+  Output Packet No Route             = 548
+  Reassembly Required                = 0
+  Reassembly Successful              = 0
+  Reassembly Failures                = 0
+  Datagrams Successfully Fragmented  = 0
+  Datagrams Failing Fragmentation    = 0
+  Fragments Created                  = 0
+
+IPv6 Statistics
+
+  Packets Received                   = 29
+  Received Header Errors             = 0
+  Received Address Errors            = 29
+  Datagrams Forwarded                = 0
+  Unknown Protocols Received         = 0
+  Received Packets Discarded         = 0
+  Received Packets Delivered         = 68000
+  Output Requests                    = 75189
+  Routing Discards                   = 0
+  Discarded Output Packets           = 0
+  Output Packet No Route             = 0
+  Reassembly Required                = 0
+  Reassembly Successful              = 0
+  Reassembly Failures                = 0
+  Datagrams Successfully Fragmented  = 0
+  Datagrams Failing Fragmentation    = 0
+  Fragments Created                  = 0
+
+ICMPv4 Statistics
+
+                            Received    Sent
+  Messages                  1321        2749
+  Errors                    0           0
+  Destination Unreachable   740         2613
+  Time Exceeded             566         0
+  Parameter Problems        0           0
+  Source Quenches           0           0
+  Redirects                 0           0
+  Echo Replies              13          0
+  Echos                     2           136
+  Timestamps                0           0
+  Timestamp Replies         0           0
+  Address Masks             0           0
+  Address Mask Replies      0           0
+  Router Solicitations      0           0
+  Router Advertisements     0           0
+
+ICMPv6 Statistics
+
+                            Received    Sent
+  Messages                  0           115
+  Errors                    0           0
+  Destination Unreachable   0           0
+  Packet Too Big            0           0
+  Time Exceeded             0           0
+  Parameter Problems        0           0
+  Echos                     0           0
+  Echo Replies              0           0
+  MLD Queries               0           0
+  MLD Reports               0           0
+  MLD Dones                 0           0
+  Router Solicitations      0           69
+  Router Advertisements     0           0
+  Neighbor Solicitations    0           23
+  Neighbor Advertisements   0           23
+  Redirects                 0           0
+  Router Renumberings       0           0
+
+TCP Statistics for IPv4
+
+  Active Opens                        = 167749
+  Passive Opens                       = 9082
+  Failed Connection Attempts          = 28428
+  Reset Connections                   = 67197
+  Current Connections                 = 92
+  Segments Received                   = 10634085
+  Segments Sent                       = 4594940
+  Segments Retransmitted              = 81995
+
+TCP Statistics for IPv6
+
+  Active Opens                        = 257
+  Passive Opens                       = 140
+  Failed Connection Attempts          = 143
+  Reset Connections                   = 260
+  Current Connections                 = 0
+  Segments Received                   = 49077
+  Segments Sent                       = 48544
+  Segments Retransmitted              = 464
+
+UDP Statistics for IPv4
+
+  Datagrams Received    = 867172
+  No Ports              = 3360
+  Receive Errors        = 0
+  Datagrams Sent        = 693541
+
+UDP Statistics for IPv6
+
+  Datagrams Received    = 61989
+  No Ports              = 0
+  Receive Errors        = 0
+  Datagrams Sent        = 19809
+
+C:\Users\KIIT>nslookup www.kiit.ac.in
+Server:  UnKnown
+Address:  192.168.122.125
+
+Non-authoritative answer:
+Name:    www.kiit.ac.in
+Addresses:  2606:4700:8d99:364f:ad9:aa4:a263:c09
+          172.67.75.3
+          104.26.2.120
+          104.26.3.120
+
+
+C:\Users\KIIT>nslookup www.facebook.com
+Server:  UnKnown
+Address:  192.168.122.125
+
+Non-authoritative answer:
+Name:    star-mini.c10r.facebook.com
+Addresses:  2a03:2880:f16b:81:face:b00c:0:25de
+          157.240.242.35
+Aliases:  www.facebook.com
+
+
+C:\Users\KIIT>nslookup 8.8.8.8
+Server:  UnKnown
+Address:  192.168.122.125
+
+Name:    dns.google
+Address:  8.8.8.8
+
+
+C:\Users\KIIT>nslookup www.example.com 8.8.8.8
+Server:  dns.google
+Address:  8.8.8.8
+
+Non-authoritative answer:
+Name:    www.example.com
+Addresses:  2606:2800:21f:cb07:6820:80da:af6b:8b2c
+          93.184.215.14
+
+
+C:\Users\KIIT>ipconfig /all
+
+Windows IP Configuration
+
+   Host Name . . . . . . . . . . . . : BT-22052255
+   Primary Dns Suffix  . . . . . . . :
+   Node Type . . . . . . . . . . . . : Hybrid
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+
+Ethernet adapter Ethernet:
+
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : VirtualBox Host-Only Ethernet Adapter
+   Physical Address. . . . . . . . . : 0A-00-27-00-00-0D
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::fbff:d86e:946e:aa00%13(Preferred)
+   IPv4 Address. . . . . . . . . . . : 192.168.56.1(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . :
+   DHCPv6 IAID . . . . . . . . . . . : 755630119
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-2A-B4-B8-9C-20-C1-9B-7C-91-E7
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Wireless LAN adapter Local Area Connection* 3:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Microsoft Wi-Fi Direct Virtual Adapter #3
+   Physical Address. . . . . . . . . : 20-C1-9B-7C-91-E8
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Wireless LAN adapter Local Area Connection* 4:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Microsoft Wi-Fi Direct Virtual Adapter #4
+   Physical Address. . . . . . . . . : 22-C1-9B-7C-91-E7
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Wireless LAN adapter Wi-Fi:
+
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Intel(R) Wi-Fi 6 AX201 160MHz
+   Physical Address. . . . . . . . . : 20-C1-9B-7C-91-E7
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   IPv4 Address. . . . . . . . . . . : 192.168.122.112(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Lease Obtained. . . . . . . . . . : 05 August 2024 20:00:49
+   Lease Expires . . . . . . . . . . : 05 August 2024 21:00:48
+   Default Gateway . . . . . . . . . : 192.168.122.125
+   DHCP Server . . . . . . . . . . . : 192.168.122.125
+   DNS Servers . . . . . . . . . . . : 192.168.122.125
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Ethernet adapter Bluetooth Network Connection:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Bluetooth Device (Personal Area Network)
+   Physical Address. . . . . . . . . : 20-C1-9B-7C-91-EB
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Ethernet adapter vEthernet (WSL):
+
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Hyper-V Virtual Ethernet Adapter
+   Physical Address. . . . . . . . . : 00-15-5D-16-86-0E
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::5cfb:88ca:42fe:d388%48(Preferred)
+   IPv4 Address. . . . . . . . . . . : 172.26.192.1(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.240.0
+   Default Gateway . . . . . . . . . :
+   DHCPv6 IAID . . . . . . . . . . . : 805311837
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-2A-B4-B8-9C-20-C1-9B-7C-91-E7
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+C:\Users\KIIT>ipconfig /release
+
+Windows IP Configuration
+
+No operation can be performed on Local Area Connection* 3 while it has its media disconnected.
+No operation can be performed on Local Area Connection* 4 while it has its media disconnected.
+No operation can be performed on Bluetooth Network Connection while it has its media disconnected.
+
+Ethernet adapter Ethernet:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::fbff:d86e:946e:aa00%13
+   IPv4 Address. . . . . . . . . . . : 192.168.56.1
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . :
+
+Wireless LAN adapter Local Area Connection* 3:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Local Area Connection* 4:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Wi-Fi:
+
+   Connection-specific DNS Suffix  . :
+   Default Gateway . . . . . . . . . :
+
+Ethernet adapter Bluetooth Network Connection:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Ethernet adapter vEthernet (WSL):
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::5cfb:88ca:42fe:d388%48
+   IPv4 Address. . . . . . . . . . . : 172.26.192.1
+   Subnet Mask . . . . . . . . . . . : 255.255.240.0
+   Default Gateway . . . . . . . . . :
+
+C:\Users\KIIT>ipconfig /renew
+
+Windows IP Configuration
+
+No operation can be performed on Local Area Connection* 3 while it has its media disconnected.
+No operation can be performed on Local Area Connection* 4 while it has its media disconnected.
+An error occurred while renewing interface Wi-Fi : The operation was canceled by the user.
+
+No operation can be performed on Bluetooth Network Connection while it has its media disconnected.
